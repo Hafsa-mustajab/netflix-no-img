@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+ *{
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif ;
+    box-sizing: border-box;
+}
+body{
+    background: #000;
+    color: #fff;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images/netflix.bg.jpg) ;
+    background-size: cover;
+    background-position: center;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 90px 10px 90px;
+    background:linear-gradient(180deg, rgba(0, 0, 0, 0.8000) 0.000%, rgba(0, 0, 0, 0.7889) 8.333%, rgba(0, 0, 0, 0.7556) 16.67%, rgba(0, 0, 0, 0.7000) 25.00%, rgba(0, 0, 0, 0.6222) 33.33%, rgba(0, 0, 0, 0.5222) 41.67%, rgba(0, 0, 0, 0.4000) 50.00%, rgba(0, 0, 0, 0.2778) 58.33%, rgba(0, 0, 0, 0.1778) 66.67%, rgba(0, 0, 0, 0.1000) 75.00%, rgba(0, 0, 0, 0.04444) 83.33%, rgba(0, 0, 0, 0.01111) 91.67%, rgba(0, 0, 0, 0.000) 100.0%);
+}
+.popup{
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    text-align: center;
+    padding: 48px 68px;
+    line-height: 1.5cm;
+   
+   
+}
+
+
+.popup h2{
+    font-size: 32px;
+}
+.popup form input{
+    width: 314px;
+    padding: 18px 16px 8px;
+    background: #0f0f0f;
+    border-radius: 4px;
+    border-color: #fff;
+    color: #fff;
+}
+.popup form button{
+    width: 314px;
+    padding: 15px 16px 10px;
+    align-items: center;
+    font-size: 16px;
+    border-radius: 4px;
+}
+.popup a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+}
+
+.popup a:hover{
+    text-decoration: underline;
+    color: #fff;
+}
+
+
+.netflix-logo{
+    width: 150px;
+    cursor: pointer;
+}
+nav button{
+    border: 0;
+    outline: 0;
+    background: #db0001;
+    color: #fff;
+    padding:9px 18px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    
+
+}
+nav button a{
+    text-decoration: none;
+    color: #fff;
+}
+    
+@media (max-width: 1024px) {
+    nav {
+        padding: 20px 50px;
+    }
+    .popup {
+        width: 80%;
+        padding: 36px 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+    nav button {
+        margin-top: 10px;
+    }
+    .popup {
+        width: 90%;
+        padding: 24px 34px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 10px;
+    }
+    .popup {
+        width: 100%;
+        padding: 20px;
+    }
+    .popup form input, 
+    .popup form button {
+        width: 100%;
+    }
+}
+
+
+
+    </style>
+    <div class="header">
+        <nav>
+           <a href=".."><img src="images/logo.png" class="netflix-logo"></a>
+              <div>
+                  <button id="popup"><a href="">Sign In</a></button>
+                  <div class="popup">
+                      <h2>Sign In</h2>
+                   <form action="">
+                      <input type="text" placeholder="Email or mobile number"><br>
+                      <input type="text" placeholder="Password"><br>
+                      <button><b>Sign In</b></button>
+                  </form>
+                      <input type="checkbox">&nbsp;Remember me
+                      <p>New to Netflix? <a href="">Sign up now.</a></p>
+      
+                  </div>
+              </div>
+        </nav>
+</body>
+</html>
